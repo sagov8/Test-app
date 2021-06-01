@@ -17,17 +17,11 @@ export class ServiceService {
     return this.http.get<Persona[]>(this.Url + "lista")
   }
   
-  public detail(id: number): Observable<Persona> {
-    return this.http.get<Persona>(this.Url + `detail/${id}`);
+  public createPersona(persona: Persona): Observable<Persona>{
+    return this.http.post<Persona>(this.Url + 'create', persona);
   }
 
-  public detailName(nombre: string): Observable<Persona> {
-    return this.http.get<Persona>(this.Url + `detailname/${nombre}`);
-  }
-
-  public save(persona: Persona): Observable<any> {
-    return this.http.post<any>(this.Url + 'create', persona);
-  }
+  
 
   public update(id: number, persona: Persona): Observable<any> {
     return this.http.put<any>(this.Url + `update/${id}`, persona);
