@@ -13,7 +13,7 @@ export class ServiceService {
 
   Url='http://localhost:8080/personas/';
 
-  public lista(): Observable<Persona[]> {
+  public getPersonas(): Observable<Persona[]> {
     return this.http.get<Persona[]>(this.Url + "lista")
   }
   
@@ -25,12 +25,12 @@ export class ServiceService {
     return this.http.get<Persona>(this.Url + `detailname/${nombre}`);
   }
 
-  public save(producto: Persona): Observable<any> {
-    return this.http.post<any>(this.Url + 'create', producto);
+  public save(persona: Persona): Observable<any> {
+    return this.http.post<any>(this.Url + 'create', persona);
   }
 
-  public update(id: number, producto: Persona): Observable<any> {
-    return this.http.put<any>(this.Url + `update/${id}`, producto);
+  public update(id: number, persona: Persona): Observable<any> {
+    return this.http.put<any>(this.Url + `update/${id}`, persona);
   }
 
   public delete(id: number): Observable<any> {

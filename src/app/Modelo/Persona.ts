@@ -3,9 +3,9 @@ export class Persona{
     name:string;
     apellidos:string;
 
-    constructor(nombre: string, apellido: string){
+    constructor(nombre: string, apellidos: string){
         this.name = nombre;
-        this.apellidos = apellido;   
+        this.apellidos = apellidos;   
     }
 }
 
