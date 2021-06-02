@@ -13,11 +13,25 @@ export class EditComponent implements OnInit {
   persona :Persona=new Persona("", "");
   constructor(private router:Router,private service:ServiceService) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.Editar();
+  }
    
+  Editar(){
+    let id=localStorage.getItem("id");
+    this.service.getPersonaId(+id!).
+    subscribe(data=>{
+      this.persona=data
+    })
+  }
 
-  Actualizar(){
-    alert('Actualizado');
+  Actualizar(persona: Persona){
+    this.service.updatePersona(persona.id!, persona).
+    subscribe(data=>{
+      this.persona=data;
+      alert("Se actualizó correctamente");
+      this.router.navigate(["listar"]);
+    })
     
   }
 

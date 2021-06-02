@@ -21,10 +21,12 @@ export class ServiceService {
     return this.http.post<Persona>(this.Url + 'create', persona);
   }
 
-  
+  public getPersonaId(id:number){
+    return this.http.get<Persona>(this.Url+"detail/"+id)
+  }
 
-  public update(id: number, persona: Persona): Observable<any> {
-    return this.http.put<any>(this.Url + `update/${id}`, persona);
+  public updatePersona(id: number, persona: Persona): Observable<any> {
+    return this.http.put<any>(this.Url + "update/"+ persona.id, persona);
   }
 
   public delete(id: number): Observable<any> {
