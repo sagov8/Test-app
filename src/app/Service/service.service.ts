@@ -29,7 +29,7 @@ export class ServiceService {
     return this.http.put<any>(this.Url + "update/"+ persona.id, persona);
   }
 
-  public delete(id: number): Observable<any> {
-    return this.http.delete<any>(this.Url + `delete/${id}`);
+  public deletePersona(persona: Persona): Observable<any> {
+    return this.http.delete<any>(this.Url + "delete/" + persona.id);
   } 
 }
