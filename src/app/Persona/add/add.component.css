@@ -2,3 +2,7 @@
     text-align: center;
     display: flex;
 }
+
+.container{
+    margin-top: 30px;
+}
