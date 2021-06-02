@@ -10,12 +10,5 @@ export class AppComponent {
   title = 'Test-app';
 
   constructor(private router:Router) {}  
-  
-  Listar(){
-    this.router.navigate(["listar"])
-  }
 
-  Nuevo(){
-    this.router.navigate(["add"]);
-  }
 }
