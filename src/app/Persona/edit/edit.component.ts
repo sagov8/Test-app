@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceService } from 'src/app/Service/service.service';
+import { Persona } from 'src/app/Modelo/Persona';
 
 @Component({
   selector: 'app-edit',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditComponent implements OnInit {
 
-  constructor() { }
+  persona :Persona=new Persona("", "");
+  constructor(private router:Router,private service:ServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() { }
+   
+
+  Actualizar(){
+    alert('Actualizado');
+    
   }
 
 }
+
