@@ -13,6 +13,10 @@ import {HttpClientModule} from '@angular/common/http'
 //external
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { LoginComponent } from './auth/login.component';
+import { RegistroComponent } from './auth/registro.component';
+import { MenuComponent } from './menu/menu.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { ToastrModule } from 'ngx-toastr';
     ListarComponent,
     AddComponent,
     EditComponent,
+    LoginComponent,
+    RegistroComponent,
+    MenuComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
