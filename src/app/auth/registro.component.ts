@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginUsuario } from '../Modelo/login-usuario';
+import { NuevoUsuario } from '../Modelo/nuevo-usuario';
 import { AuthService } from '../Service/auth.service';
 import { TokenService } from '../Service/token.service';
+
 
 @Component({
   selector: 'app-registro',
@@ -10,12 +11,14 @@ import { TokenService } from '../Service/token.service';
   styleUrls: ['./registro.component.css'],
 })
 export class RegistroComponent implements OnInit {
-  isLogged = false;
-  isLoginFail = false;
-  loginUsuario = LoginUsuario;
+
+  nuevoUsuario: NuevoUsuario;
+  nombre: string;
   nombreUsuario: string;
+  email: string;
   password: string;
-  roles: string[] = [];
+  errMsj: string;
+  isLogged: boolean;
 
   constructor(
     private tokenService: TokenService,
@@ -23,20 +26,12 @@ export class RegistroComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {
-    if (this.tokenService.getToken()) {
+  ngOnInit() {
+    if(this.tokenService.getToken()){
       this.isLogged = true;
-      this.isLoginFail = false;
-      this.roles = this.tokenService.getAuthorities();
-    }
+    }    
+    
   }
 
-  onLogin(): void {
-    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-    this.authService.login(this.loginUsuario).subscribe((data) => {
-      this.isLogged = true;
-      this.isLoginFail = false;
-      this.tokenService.setToken(data.token);
-    });
-  }
+  
 }

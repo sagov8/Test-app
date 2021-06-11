@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Session } from 'inspector';
 
 const TOKEN_KEY = 'AuthToken';
 const USERNAME_KEY = 'AuthUsername';
@@ -19,7 +18,7 @@ export class TokenService {
   }
 
   getToken(): string {
-    return JSON.parse(sessionStorage.getItem(TOKEN_KEY)!);
+    return (sessionStorage.getItem(TOKEN_KEY)!);
   }
 
   setUserName(userName: string): void {
