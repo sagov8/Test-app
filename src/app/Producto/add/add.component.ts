@@ -14,8 +14,9 @@ export class AddComponent implements OnInit {
   producto: Producto;
   ngOnInit(): void {}
 
-  prepareToSave(name: string, cantidad: number) {
-    this.producto = new Producto(name, cantidad);
+  prepareToSave(name: string, cantidad: number, precio: number,
+     estado: string) {
+    this.producto = new Producto(name, cantidad, precio, estado);
     this.Guardar(this.producto);
   }
 

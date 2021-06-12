@@ -22,13 +22,13 @@
           <li class="nav-item" *ngIf="isLogged">
             <a class="nav-link" href="/listar" style="color: beige"
               ><i class="fas fa-list-ul" style="margin-right: 10px"></i
-              >Listar</a
+              >Inventario</a
             >
           </li>
           <li class="nav-item" *ngIf="isLogged">
-            <a class="nav-link" href="/add" style="color: beige"
+            <a *ngIf="isAdmin" class="nav-link" href="/add" style="color: beige"
               ><i class="far fa-plus-square" style="margin-right: 10px"></i
-              >Nuevo</a
+              >Nuevo Producto</a
             >
           </li>
           <li class="nav-item" *ngIf="!isLogged">
@@ -47,7 +47,7 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color: beige"
+            <a *ngIf="!isAdmin" class="nav-link" href="#" style="color: beige"
               ><i class="fas fa-shopping-cart"></i> Carrito</a
             >
           </li>

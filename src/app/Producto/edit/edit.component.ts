@@ -10,11 +10,19 @@ import { Producto } from 'src/app/Modelo/Producto';
 })
 export class EditComponent implements OnInit {
 
-  producto :Producto=new Producto("", 0);
+  producto :Producto=new Producto("", 0, 0, "");
   constructor(private router:Router,private service:ProductoService) { }
 
   ngOnInit() { 
     this.Editar();
+  }
+
+  VerificarEstado(cantidad: number): void{
+    if(cantidad === 0){
+      this.producto.estado = "Agotado";
+    } else {
+      this.producto.estado = "Disponible";
+    }
   }
    
   Editar(){

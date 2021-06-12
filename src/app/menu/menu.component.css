@@ -1,3 +1,5 @@
+
+
 .navbar-nav.navbar-center {
   position: absolute;
   left: 50%;
@@ -41,12 +43,27 @@ text-align: center;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
 
+ .nav-navbar-nav-navbar-right{
+   padding-top: 18px;
+  transform: translateX(50%);
+  list-style-type: none;
+
+ }
+
+ .form {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+
+
+}
 
  .contenedor{
-  margin: 20px 170px  800px 170px;
-  width: 1000px ;
-  height: 500px;
-  padding: 20px;
+  
+  margin: 20px 180px  200px 350px;
+  width: 700px ;
+  height: 750px;
+  padding: 10px;
   background-color:  #99e2b4;
   border-radius: 15px;
  }
@@ -63,4 +80,27 @@ text-align: center;
 
 h6{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.form .elemento input[type="submit"] {
+  background-color:#007f5f ;
+ 
+  border: double 2px;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  border-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 20px;
+  margin-top: 30px;
+  font-weight: bold;
+  margin-left: 140px;
+}
+
+ .contenedor .form h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #22577a;
+  
 }

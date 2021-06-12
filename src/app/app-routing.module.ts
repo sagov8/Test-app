@@ -13,8 +13,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path:'listar', component:ListarComponent},
-  {path:'add', component:AddComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
-  {path:'edit', component:EditComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }}
+  {path:'add', component:AddComponent},
+  {path:'edit', component:EditComponent}
 ];
 
 @NgModule({

@@ -14,8 +14,16 @@
                 <label for="">Cantidad</label>
                 <input #cantidad type="text" class="form-control">
             </div>
+            <div class="form-group">
+                <label for="">Precio</label>
+                <input #precio type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Estado</label>
+                <input #estado type="text" class="form-control">
+            </div>
             <button class="btn btn-outline-success" type="submit" 
-            (click)= "prepareToSave(name.value, +cantidad.value)"
+            (click)= "prepareToSave(name.value, +cantidad.value, +precio.value, estado.value)"
             style="margin: 10px;">Guardar</button>
          </form>
      </div>

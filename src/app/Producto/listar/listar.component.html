@@ -11,6 +11,8 @@
                    <th>ID</th>
                    <th>PRODUCTO</th>
                    <th>CANTIDAD</th>
+                   <th>PRECIO</th>
+                   <th>ESTADO</th>
                    <th *ngIf="isAdmin">ACCIONES</th>
                </tr>
            </thead>
@@ -19,6 +21,8 @@
                 <td>{{producto.id}}</td>   
                 <td>{{producto.name}}</td>  
                 <td>{{producto.cantidad}}</td>  
+                <td>{{producto.precio}}</td> 
+                <td >{{producto.estado}}</td>
                 <td>
                     <button *ngIf="isAdmin" (click)= "Editar(producto)" class= "btn btn-success">Editar</button>
                     <button *ngIf="isAdmin" (click)= "Delete(producto)" class= "btn btn-danger" >Delete</button>

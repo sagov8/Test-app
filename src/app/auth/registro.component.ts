@@ -4,14 +4,12 @@ import { NuevoUsuario } from '../Modelo/nuevo-usuario';
 import { AuthService } from '../Service/auth.service';
 import { TokenService } from '../Service/token.service';
 
-
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css'],
 })
 export class RegistroComponent implements OnInit {
-
   nuevoUsuario: NuevoUsuario;
   nombre: string;
   nombreUsuario: string;
@@ -27,11 +25,20 @@ export class RegistroComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
-    }    
-    
+    }
   }
 
-  
+  onRegister(): void {
+    this.nuevoUsuario = new NuevoUsuario(
+      this.nombre,
+      this.nombreUsuario,
+      this.email,
+      this.password
+    );
+    this.authService.nuevo(this.nuevoUsuario).subscribe((data) => {});
+
+    this.router.navigate(['/login']);
+  }
 }

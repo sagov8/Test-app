@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ProductoService } from '../Service/producto.service';
 import { TokenService } from '../Service/token.service';
 
 @Component({
@@ -9,8 +11,15 @@ import { TokenService } from '../Service/token.service';
 export class MenuComponent implements OnInit {
 
   isLogged: boolean = false;
+  roles: string[];
+  isAdmin: boolean = false;
 
-  constructor(private tokenService: TokenService) { }
+  constructor(
+    private service: ProductoService,
+    private tokenService: TokenService,
+    private router: Router
+    
+    ) { }
 
   ngOnInit(){
     if(this.tokenService.getToken()){
@@ -18,6 +27,12 @@ export class MenuComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach((rol) => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
   onLogOut(): void{
