@@ -14,22 +14,30 @@ export class ProductoService {
   Url='http://localhost:8080/producto/';
 
   public getProductos(): Observable<Producto[]> {
-    return this.http.get<Producto[]>(this.Url + "lista")
+    return this.http.get<Producto[]>(this.Url + 'lista')
   }
   
-  public createProducto(persona: Producto): Observable<Producto>{
-    return this.http.post<Producto>(this.Url + 'create', persona);
+  public detail(id: number): Observable<Producto> {
+    return this.http.get<Producto>(this.Url + `detail/${id}`);
+  }
+
+  public detailName(nombre: string): Observable<Producto> {
+    return this.http.get<Producto>(this.Url + `detailname/${nombre}`);
+  }
+
+  public createProducto(producto: Producto): Observable<Producto>{
+    return this.http.post<Producto>(this.Url + 'create', producto);
   }
 
   public getProductoId(id:number){
     return this.http.get<Producto>(this.Url+"detail/"+id)
   }
 
-  public updateProducto(id: number, persona: Producto): Observable<any> {
-    return this.http.put<any>(this.Url + "update/"+ persona.id, persona);
+  public updateProducto(id: number, producto: Producto): Observable<any> {
+    return this.http.put<any>(this.Url + "update/"+ producto.id, producto);
   }
 
-  public deleteProducto(persona: Producto): Observable<any> {
-    return this.http.delete<any>(this.Url + "delete/" + persona.id);
+  public deleteProducto(producto: Producto): Observable<any> {
+    return this.http.delete<any>(this.Url + "delete/" + producto.id);
   } 
 }
