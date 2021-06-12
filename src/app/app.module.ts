@@ -7,8 +7,8 @@ import { ListarComponent } from './Persona/listar/listar.component';
 import { AddComponent } from './Persona/add/add.component';
 import { EditComponent } from './Persona/edit/edit.component';
 import {FormsModule} from '@angular/forms';
-import {ServiceService}from '../app/Service/service.service';
 import {HttpClientModule} from '@angular/common/http'
+import { interceptorProvider } from './interceptors/prod-interceptor.service';
 
 //external
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +17,7 @@ import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { IndexComponent } from './index/index.component';
     BrowserAnimationsModule, 
     ToastrModule.forRoot()
   ],
-  providers: [ServiceService],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 export class JwtDTO {
   token: string;
   type: string;
-  nombreusuario: string;
+  nombreUsuario: string;
   authorities: string[];
 }

@@ -8,7 +8,7 @@ import { TokenService } from '../Service/token.service';
 })
 export class MenuComponent implements OnInit {
 
-  isLogged: boolean;
+  isLogged: boolean = false;
 
   constructor(private tokenService: TokenService) { }
 
@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
 
   onLogOut(): void{
     this.tokenService.logOut();
-    window.location.reload;
+    window.location.reload();
   }
 
 }

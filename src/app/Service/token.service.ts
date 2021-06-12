@@ -27,7 +27,7 @@ export class TokenService {
   }
 
   getUserName(): string {
-    return JSON.parse(sessionStorage.getItem(USERNAME_KEY)!);
+    return sessionStorage.getItem(USERNAME_KEY)!;
   }
 
   setAuthorities(authorities: string[]): void {
