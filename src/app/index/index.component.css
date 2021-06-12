@@ -3,71 +3,102 @@
   left: 50%;
   transform: translatex(-105%);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
-.navbar-collapse-collapse {
-  transform: translatex(10%);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
 
 }
 
-.navbar-brand {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.navbar-collapse-collapse{
+transform: translatex(10%);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
-:root {
+.navbar-brand{
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+:root{
   background-color: #fff;
 }
 
-.navbar-nav.navbar-center a:link,
-a:visited {
+.navbar-nav.navbar-center a:link, a:visited{
+background-color: #d8f3dc;
+padding: 15px 25px;
+text-align: center;
+}
+
+.navbar-collapse-collapse a:link, a:visited{
   background-color: #d8f3dc;
   padding: 15px 25px;
   text-align: center;
 }
+ 
+ h1{
+   text-align: center;
+   padding-top: 30px;
+   color: #081c15;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
 
-.navbar-collapse-collapse a:link,
-a:visited {
-  background-color: #d8f3dc;
-  padding: 15px 25px;
-  text-align: center;
-}
-
-h1 {
-  text-align: center;
-  padding-top: 30px;
-  color: #081c15;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.nav-navbar-nav-navbar-right {
-  padding-top: 18px;
+ .nav-navbar-nav-navbar-right{
+   padding-top: 18px;
   transform: translateX(50%);
   list-style-type: none;
 
+ }
+
+ .form {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+
+
 }
 
-
-.contenedor {
-  margin: 20px 170px 800px 170px;
-  width: 1000px;
-  height: 500px;
-  padding: 20px;
-  background-color: #99e2b4;
+ .contenedor{
+  
+  margin: 20px 180px  200px 350px;
+  width: 700px ;
+  height: 750px;
+  padding: 10px;
+  background-color:  #99e2b4;
   border-radius: 15px;
-}
+ }
 
-.me-4-text-reset {
+ .me-4-text-reset{
   font-size: 1.8em;
-  color: #22577a;
+  color:#22577a ;
   width: 30px;
 }
 
-.p {
+.p{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-h6 {
+h6{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.form .elemento input[type="submit"] {
+  background-color:#007f5f ;
+ 
+  border: double 2px;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  border-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 20px;
+  margin-top: 30px;
+  font-weight: bold;
+  margin-left: 140px;
+}
+
+ .contenedor .form h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #22577a;
+  
 }

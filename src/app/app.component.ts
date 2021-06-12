@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Test-app';
+  title = 'Naturales-Cattleya';
 
   constructor(private router:Router) {}  
 

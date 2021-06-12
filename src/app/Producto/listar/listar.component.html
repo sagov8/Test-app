@@ -1,0 +1,31 @@
+<app-menu></app-menu>
+<div class="container">
+  <div class="card">
+   <div class="card-header">  
+       <h3>Productos</h3>
+   </div> 
+   <div class="card-body">
+       <table class="table table-hover">
+           <thead>
+               <tr class="text-center">
+                   <th>ID</th>
+                   <th>PRODUCTO</th>
+                   <th>CANTIDAD</th>
+                   <th *ngIf="isAdmin">ACCIONES</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr *ngFor="let producto of productos" class="text-center">
+                <td>{{producto.id}}</td>   
+                <td>{{producto.name}}</td>  
+                <td>{{producto.cantidad}}</td>  
+                <td>
+                    <button *ngIf="isAdmin" (click)= "Editar(producto)" class= "btn btn-success">Editar</button>
+                    <button *ngIf="isAdmin" (click)= "Delete(producto)" class= "btn btn-danger" >Delete</button>
+                </td>  
+               </tr>
+           </tbody>
+       </table>
+   </div>
+  </div>
+  </div>
